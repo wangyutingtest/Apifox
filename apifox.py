@@ -24,7 +24,8 @@ class InformRobot:
         data = {
             "msgtype": "markdown",  # 消息类型，此时固定为markdown
             "markdown": {
-                "content": f"### 提醒! <font color=\"info\"> {job_name} </font> 接口自动化测试反馈  \n "
+                # "content": f"### 提醒! <font color=\"info\"> {job_name} </font> 接口自动化测试反馈  \n "
+                "content": "### 提醒! <font color=\"info\"> {0} </font> 接口自动化测试反馈  \n".format(job_name) +
                            f">环境：{test_environment} \n" +
                            f">测试用例结果：<font color=\"info\"> {STATUS} </font> \n" +
                            f">测试用例总数：<font color=\"info\"> {self.test_case_quantity_rate} </font> \n" +
