@@ -26,15 +26,15 @@ class InformRobot:
             "markdown": {
                 # "content": f"### 提醒! <font color=\"info\"> {job_name} </font> 接口自动化测试反馈  \n "
                 "content": "### 提醒! <font color=\"info\"> {0} </font> 接口自动化测试反馈  \n".format(job_name) +
-                           f">环境：{test_environment} \n" +
-                           f">测试用例结果：<font color=\"info\"> {STATUS} </font> \n" +
-                           f">测试用例总数：<font color=\"info\"> {self.test_case_quantity_rate} </font> \n" +
-                           f">平均接口请求耗时：<font color=\"info\"> {self.avg_api_response_rate} </font> \n" +
-                           f">测试用例通过率：<font color=\"info\"> {self.test_case_passing_rate} </font> \n" +
-                           f">测试用例失败率：<font color=\"#FF0000\"> {self.test_case_fail_rate} </font> \n" +
-                           f">测试用例未测率：<font color=\"#FFCC33\"> {self.test_case_untested_rate} </font> \n" +
-                           f">测试报告链接：[点击查看报告详情]({report_url}) \n" +
-                           f">测试负责人：{principal}"
+                           "f环境：{test_environment} \n" +
+                           "f测试用例结果：<font color=\"info\"> {STATUS} </font> \n" +
+                           "f测试用例总数：<font color=\"info\"> {self.test_case_quantity_rate} </font> \n" +
+                           "f平均接口请求耗时：<font color=\"info\"> {self.avg_api_response_rate} </font> \n" +
+                           "f测试用例通过率：<font color=\"info\"> {self.test_case_passing_rate} </font> \n" +
+                           "f测试用例失败率：<font color=\"#FF0000\"> {self.test_case_fail_rate} </font> \n" +
+                           "f测试用例未测率：<font color=\"#FFCC33\"> {self.test_case_untested_rate} </font> \n" +
+                           "f测试报告链接：[点击查看报告详情]({report_url}) \n" +
+                           "f测试负责人：{principal}"
             }
         }
         re_post = self.sess.post(webhook_url, data=json.dumps(data), verify=False)
